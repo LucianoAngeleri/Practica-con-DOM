@@ -23,7 +23,9 @@ function verMas(){
     console.log("Desde la función 'Ver Mas'")
     //Traemos el "section" padre
     let seccionPadre = document.querySelector("#contenedorPadre")
-    //Creamos el nuevo elemento
+ 
+    if (botonVerMas.innerHTML === "Ver mas") {
+           //Creamos el nuevo elemento
     let parrafo = document.createElement("p")
     parrafo.innerHTML = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, ipsa quam aut odit maxime, eligendi dolor
     nesciunt pariatur nisi beatae dolore, culpa iste? Quod minus, tenetur incidunt ducimus molestias neque vitae
@@ -35,4 +37,15 @@ function verMas(){
     //seccionPadre.appendChild(parrafo);
     //seccionPadre.prepend(parrafo);
     seccionPadre.insertBefore(parrafo,botonVerMas);
+
+    botonVerMas.innerHTML ="Ocultar"
+    botonVerMas.className ="btn btn-danger"
+
+    }else{
+        console.log(seccionPadre.children)
+        seccionPadre.removeChild(seccionPadre.children[3])
+        botonVerMas.innerHTML ="Ver mas"
+        botonVerMas.className ="btn btn-primary"
+
+    }
 }
