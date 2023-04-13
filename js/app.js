@@ -25,27 +25,24 @@ function verMas(){
     let seccionPadre = document.querySelector("#contenedorPadre")
  
     if (botonVerMas.innerHTML === "Ver mas") {
-           //Creamos el nuevo elemento
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, ipsa quam aut odit maxime, eligendi dolor
-    nesciunt pariatur nisi beatae dolore, culpa iste? Quod minus, tenetur incidunt ducimus molestias neque vitae
-    maiores ratione ea perferendis facere nulla, itaque deserunt, totam quas officia. Voluptate cupiditate
-    eveniet, est numquam beatae neque, veritatis debitis ea iusto magni, sapiente totam architecto assumenda.
-    Quasi tempore tenetur`
-    parrafo.className = "lead"
-    //Insertar el nodo hijo
-    //seccionPadre.appendChild(parrafo);
-    //seccionPadre.prepend(parrafo);
-    seccionPadre.insertBefore(parrafo,botonVerMas);
-
-    botonVerMas.innerHTML ="Ocultar"
-    botonVerMas.className ="btn btn-danger"
-
+        //Creamos el nuevo elemento
+        let parrafo = document.createElement("p")
+        parrafo.innerHTML = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, ipsa quam aut odit maxime, eligendi dolor
+        nesciunt pariatur nisi beatae dolore, culpa iste? Quod minus, tenetur incidunt ducimus molestias neque vitae
+        maiores ratione ea perferendis facere nulla, itaque deserunt, totam quas officia. Voluptate cupiditate
+        eveniet, est numquam beatae neque, veritatis debitis ea iusto magni, sapiente totam architecto assumenda.
+        Quasi tempore tenetur`
+        parrafo.className = "lead"
+        //Insertar el nodo hijo
+        //seccionPadre.appendChild(parrafo);
+        //seccionPadre.prepend(parrafo);
+        seccionPadre.insertBefore(parrafo,botonVerMas);
+        botonVerMas.innerHTML ="Ocultar"
+        botonVerMas.className ="btn btn-danger"
     }else{
         console.log(seccionPadre.children)
         seccionPadre.removeChild(seccionPadre.children[3])
         botonVerMas.innerHTML ="Ver mas"
         botonVerMas.className ="btn btn-primary"
-
     }
 }
