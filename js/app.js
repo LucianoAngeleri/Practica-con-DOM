@@ -50,7 +50,9 @@ function verMas() {
 }
 function obtenerDato(e) {
     e.preventDefault();
+    //Resetar los datos de un formulario
     let input = document.querySelector("input");
+    console.log(input.value)
     //Resetar los datos de un formulario
     formulario.reset();
 }
